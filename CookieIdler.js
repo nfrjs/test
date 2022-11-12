@@ -2282,8 +2282,8 @@ var get2DGraphValue = () => {
             (BigNumber.ONE + cookie.value.abs()).log10().toNumber()
         );
 };
-var getPublicationMultiplier = (tau) => tau.pow(1.088);
-var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.088}";
+var getPublicationMultiplier = (tau) => tau.pow(1.15);
+var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.15}";
 var postPublish = () => {
     lump.value = lumpbf;
     hc.value = hbf;
