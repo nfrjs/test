@@ -154,7 +154,7 @@ let pubH = (i) => {
  * @param {number} i
  */
 let tickLump = (i) => {
-    let dL = (BF(i)*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
+    let dL = (BF(i)*5000*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
     lump.value += dL;
     lumpTotal += dL;
 }
@@ -2051,8 +2051,8 @@ var tick = (elapsedTime, multiplier) => {
         }
         cookie.value += dt * (CPS * Logistic() * Dilate()) / BigNumber.TEN;
         hc.value += dt * HPS / 10;
-        lump.value += dt * (BF(lwC) + (BigL10(cookie.value) / BF(lumpc)));
-        lumpTotal += dt * (BF(lwC) + (BigL10(cookie.value) / BF(lumpc)));
+        lump.value += 50 * dt * (BF(lwC) + (BigL10(cookie.value) / BF(lumpc)));
+        lumpTotal += 50 *  dt * (BF(lwC) + (BigL10(cookie.value) / BF(lumpc)));
         thyme.level+=(thyme.level < thyme.maxLevel)?1:0;
         return;
     }else{
