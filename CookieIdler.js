@@ -2038,7 +2038,7 @@ const lossfactor = BF(25);
 const mineRate = BF(150);
 var tick = (elapsedTime, multiplier) => {
     //dt magic
-    let dt = BF(elapsedTime * multiplier*50);
+    let dt = BF(elapsedTime * multiplier);
     if(aquaCrust.level > 0){
         cookie.value += Math.min(1,BigP(elements[2].value,0.99)*BF("1e-20"))*((cookie.value*12.59)/BF(36000));
         elements[2].value -= BigP(elements[2].value,0.87);
@@ -2282,8 +2282,8 @@ var get2DGraphValue = () => {
             (BigNumber.ONE + cookie.value.abs()).log10().toNumber()
         );
 };
-var getPublicationMultiplier = (tau) => tau.pow(1.078);
-var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.078}";
+var getPublicationMultiplier = (tau) => tau.pow(1.5);
+var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.5}";
 var postPublish = () => {
     lump.value = lumpbf;
     hc.value = hbf;
