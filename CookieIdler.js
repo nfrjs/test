@@ -154,7 +154,7 @@ let pubH = (i) => {
  * @param {number} i
  */
 let tickLump = (i) => {
-    let dL = 5000*(BF(i)*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
+    let dL = (BF(i)*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
     lump.value += dL;
     lumpTotal += dL;
 }
@@ -1861,7 +1861,7 @@ var calcCPS = () => {
     bc = BigNumber.ZERO;
     milk = BigNumber.FIVE * achCount;
     HPS = BF(hc.value).pow(0.9) * (recom.level+((artArt.level > 7)?10:0));
-    LPS = (recom.level+((artArt.level > 7)?10:0)) * 0.01;
+    LPS = 5000*(recom.level+((artArt.level > 7)?10:0)) * 0.01;
     let kp = kittyPower(kitty.level) * BF(BF(100 + milk) / BF(100));
     for (let i = 0; i < 19; i++) {
         if(building[i].level == 0){
