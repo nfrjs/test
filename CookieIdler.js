@@ -950,7 +950,7 @@ const cookietName = [
 	["Cheesecake","Profiteroles","Panettone","Churros","Cinnamon Bun","Jelly Donut","Glazed Donut","Chocolate Cake","Pies","Croissant","Pain Au Chocolat","Focaccia","Taiyaki","Phyllo","Apple Strudel","Samarkand Bread"],
 	["Cookie Dough","Cookie Dough(No Salmonella)","Burnt Cookie","A normal chocolate chip cookie but there\'s no chips at all for some reason","4K Cookie","Ray-Traced Cookie","Crackers","Deep-Fried Cookie","Flavor Text Cookie"],
 	["Toast","Pancakes","Marshmellows","PB amd J","Wookies","Cheeseburger","Beesechurger","One lone chocolate Chip","Pizza","Candy","Brownies","Flavor text Food that is not cookie","Medovik","Fudge"],
-	["Gilles-Cookie Paillé","liver","Mathmatically Illegal Cookie","! [ Snakey Snickerdoodles ] !","Nerdy as f Cookie",":exCookie:","JS-Formed ellipsis Cookie","SkyXCookie","Weierstra??? Cookie Spiral","Exponential Cookie","ouo cookie","Orteil ß Cookie"],
+	["Gilles-Cookie Paillï¿½","liver","Mathmatically Illegal Cookie","! [ Snakey Snickerdoodles ] !","Nerdy as f Cookie",":exCookie:","JS-Formed ellipsis Cookie","SkyXCookie","Weierstra??? Cookie Spiral","Exponential Cookie","ouo cookie","Orteil ï¿½ Cookie"],
 	["Gigaloopite","Tetraloopite","Enium Cookie","Orate Cookie","Dxygen Cookie","IUSpawn Cookie","egg","Euler Serion Cookies"],
 	["Mutated Cookie","Magic Marbled Cookie","Shortcake-like Cookie","Truffle Cookie","Salt Pretzels","Seaweed Sesame Cookie","Dulce De Leche","Keylime Pie","S\'Mores","Chocolate Drizzle Cookie","Peppermint Kiss Cookie","Sprinkled Jelly Cookie","Galaxial Drop","Reflective Frosted Cookie","Pecan Walnut Cookie","White Mine Cookie","Jelly Triangle","Gold Leafed Cookie","Grand Chocolate Wafer Sprinkles"]
 ];
@@ -1964,7 +1964,7 @@ var lessPreciseCalcCPS = () => {
     let step1 = BF(calcBuilding(dominate,0)*BF(getPower(dominate))*BF(bcps[dominate]));
     arrcps[dominate] = (step1 * kittyPower(kitty.level) * BF(BF(100 + (BF(5) * achCount)) / BF(100)) * BF(buip).pow(buildingUpgrade[dominate].level)).pow(getExpn(dominate));
     LPS = (recom.level+((artArt.level > 7)?10:0)) * 0.01;
-    LPS += sugarCoat.level * 2.5;
+    LPS += sugarCoat.level * 2.5*50;
     lwC = Math.floor((BigL10(10+(cookie.value).abs())) / lumpc) + LPS / 10;
     switch(dominate){
         case 0:
