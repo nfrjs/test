@@ -2282,10 +2282,10 @@ var get2DGraphValue = () => {
             (BigNumber.ONE + cookie.value.abs()).log10().toNumber()
         );
 };
-var getPublicationMultiplier = (tau) => tau.pow(1.15);
-var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.15}";
+var getPublicationMultiplier = (tau) => tau.pow(1.18);
+var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.18}";
 var postPublish = () => {
-    lump.value = lumpbf;
+    lump.value = lumpbf * 1.15;
     hc.value = hbf;
     CPS = BigNumber.ZERO;
     getEquationOverlay();
