@@ -154,7 +154,7 @@ let pubH = (i) => {
  * @param {number} i
  */
 let tickLump = (i) => {
-    let dL = 50*(BF(i)*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
+    let dL = 5000*(BF(i)*(LPS-(sugarCoat.level * 2.475)-(recom.level+((artArt.level > 7)?10:0)) * 0.009)) + (1 / (lumpc / BigL10(BF(10)+(cookie.value).abs())))*BF(i);
     lump.value += dL;
     lumpTotal += dL;
 }
@@ -1917,7 +1917,7 @@ var calcCPS = () => {
         LPS = (recom.level+((artArt.level > 7)?10:0)) * 0.01;
         arrcps[4] *= (recom.level > 1)?(BF(1e54) * BigP(1.9,recom.level - 1)):(BF(1e54));
     }
-    LPS += sugarCoat.level * 2.5;
+    LPS += sugarCoat.level * 2.5 * 5000;
     lwC = Math.floor((BigL10(10+(cookie.value).abs())) / lumpc) + LPS / 10;
     arrcps[14] = BigP(arrcps[14],RandR(1.01+(0.00005*buildingUpgrade[14].level),0.99+(0.00005*buildingUpgrade[14].level)));
 
@@ -1964,7 +1964,7 @@ var lessPreciseCalcCPS = () => {
     let step1 = BF(calcBuilding(dominate,0)*BF(getPower(dominate))*BF(bcps[dominate]));
     arrcps[dominate] = (step1 * kittyPower(kitty.level) * BF(BF(100 + (BF(5) * achCount)) / BF(100)) * BF(buip).pow(buildingUpgrade[dominate].level)).pow(getExpn(dominate));
     LPS = (recom.level+((artArt.level > 7)?10:0)) * 0.01;
-    LPS += sugarCoat.level * 2.5*50;
+    LPS += sugarCoat.level * 2.5*5000;
     lwC = Math.floor((BigL10(10+(cookie.value).abs())) / lumpc) + LPS / 10;
     switch(dominate){
         case 0:
