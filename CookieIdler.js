@@ -2095,7 +2095,7 @@ var tick = (elapsedTime, multiplier) => {
         }
         //elemental increase
         let realMRate = mineRate - ((10+(5*(kitty.level/(kitty.level+1))))*milkOil.level);
-        let excRate = (1+(0.2*BigP(moreExcavator.level,1.4)));
+        let excRate = (1+(0.2*BigP(moreExcavator.level,5))); //was 1.4
         for(let i=0;i<excavate.level;i++){
             elements[i].value += dt * BigL2(Logistic()+BF(2))*building[3].level*BigP(getPower(3),0.05)*BigP(buildingUpgrade[3].level,1.15)*BigP(realMRate,-1*(i+1))*excRate;
 
@@ -2282,8 +2282,8 @@ var get2DGraphValue = () => {
             (BigNumber.ONE + cookie.value.abs()).log10().toNumber()
         );
 };
-var getPublicationMultiplier = (tau) => tau.pow(1.078);
-var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.078}";
+var getPublicationMultiplier = (tau) => tau.pow(1.088);
+var getPublicationMultiplierFormula = (symbol) => symbol + "^{1.088}";
 var postPublish = () => {
     lump.value = lumpbf;
     hc.value = hbf;
