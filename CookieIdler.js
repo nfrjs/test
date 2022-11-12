@@ -2089,7 +2089,7 @@ var tick = (elapsedTime, multiplier) => {
             updateAvailability();
 
             if (cookie.value > 10 && Math.random() <= 1 / (lumpc / BigL10(cookie.value))) {
-                lump.value += BigNumber.ONE;
+                lump.value += 50 * BigNumber.ONE;
                 lumpTotal++;
             }
         }
