@@ -885,7 +885,7 @@ const buildingUpgradeName = [
 ];
 //==15 was 10, 14 was 25
 let buildingUpgradeMult = [
-    250, 3.5, 60, 125, 59, 35, 8, 17, 25, 23, 21, 20, 15, 0, 100, 10, 9, 7, 5, 7,
+    250, 3.5, 60, 125, 59, 35, 8, 17, 25, 23, 21, 20, 15, 25, 10, 10, 9, 7, 5, 7,
 ];
 
 //==HC Upgrade==
@@ -2038,7 +2038,7 @@ const lossfactor = BF(25);
 const mineRate = BF(150);
 var tick = (elapsedTime, multiplier) => {
     //dt magic
-    let dt = BF(elapsedTime * multiplier);
+    let dt = BF(elapsedTime * multiplier*50);
     if(aquaCrust.level > 0){
         cookie.value += Math.min(1,BigP(elements[2].value,0.99)*BF("1e-20"))*((cookie.value*12.59)/BF(36000));
         elements[2].value -= BigP(elements[2].value,0.87);
