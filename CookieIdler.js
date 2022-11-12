@@ -883,8 +883,9 @@ const buildingUpgradeName = [
     "Install Another Idle Game",
     "Get an extra IQ Point",
 ];
+//==15 was 10, 14 was 25
 let buildingUpgradeMult = [
-    250, 3.5, 60, 125, 59, 35, 8, 17, 25, 23, 21, 20, 15, 25, 10, 10, 9, 7, 5, 7,
+    250, 3.5, 60, 125, 59, 35, 8, 17, 25, 23, 21, 20, 15, 0, 100, 10, 9, 7, 5, 7,
 ];
 
 //==HC Upgrade==
